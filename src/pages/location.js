@@ -40,18 +40,18 @@ const Kakaomap = () => {
     }, []);
     
     return (
-        <div className='location_box'>
-          <div className="page_header">
-            <div className="location_header">
-                <div className="name">
-                  <p className="comeText">오시는 길</p>
+        <div className='box_loc'>
+          <div className="page_header_loc">
+            <div className="header_loc">
+                <div className="name_loc">
+                  <p className="comeText_loc">오시는 길</p>
                 </div>
             </div>
           </div>
           
-          <div className='text1'>
-            <span className='name2'>&nbsp;문화재단&nbsp;</span>
-            <p className="announce">
+          <div className='text1_loc'>
+            <span className='name2_loc'>&nbsp;카페 만성회&nbsp;</span>
+            <p className="announce_loc">
                <strong> ▷ 서울특별시 구로구 구로2동 4, 202호</strong><br />
                   방문 시에는 반드시 마스크를 착용해 주시고, 코로나19 방역수칙을 지켜주시기
                   바랍니다.
@@ -103,16 +103,16 @@ const Kakaomap = () => {
 
           <br />
 
-          <div className='text2'>
-            <span class="name2"><br /> <br />&nbsp;구로문화센터 주차장 안내&nbsp;</span>
-              <p class="announce2">
+          <div className='text2_loc'>
+            <span class="name2_loc"><br /> <br />&nbsp;카페 만성회 주차장 안내&nbsp;</span>
+              <p class="announce2_loc">
                   ▷ 주차공간이 많이 부족하오니 되도록 대중교통을 이용해 주시기 바랍니다.<br />
                   ▷ 주차정보안내시스템(<a href="http://parking.seoul.go.kr/"
                      >http://parking.seoul.go.kr/</a>)에서 주변 공영주차장을 확인하실 수 있습니다. <br />
                   ▷ 시설물을 보호하기 위해 높이 2.3m 이상 차량은 주차장으로 진입할 수 없습니다.<br /><br />
               </p>
-            <span class="name2">&nbsp;개방시간&nbsp;</span>
-              <p class="announce2">
+            <span class="name2_loc">&nbsp;개방시간&nbsp;</span>
+              <p class="announce2_loc">
                 <strong> 평일</strong> : 08:30~21:00 <br />
                 <strong> 주말 및 공휴일</strong> : 09:00 ~21:00 <br />
                 <thin>
@@ -121,8 +121,8 @@ const Kakaomap = () => {
                     주차수요 과포화 및 교통 혼잡이 예상될 경우 주차장 이용이 제한될 수 있습니다.</thin><br />
                 <br />
               </p>
-            <span class="name2">&nbsp;주차요금&nbsp;</span>
-              <p class="announce2">
+            <span class="name2_loc">&nbsp;주차요금&nbsp;</span>
+              <p class="announce2_loc">
                 ▷ 경차 : 10분당 1,000원 (평일 09:00~18:00만 부과)<br />
                 ▷ 중형차 : 10분당 1,200원 (평일 09:00~18:00만 부과)
               </p>
