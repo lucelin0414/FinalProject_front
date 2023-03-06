@@ -1,0 +1,300 @@
+@charset "utf=8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    word-break: keep-all;
+    font-family: 'Noto Sans KR', sans-serif;
+ }
+
+ .bVoXXg img{
+   height: 100%;
+ }
+
+ .bVoXXg a{
+   display: inline-block !important;
+    height: 100% !important;
+}
+ 
+
+.LectureList-header-text {
+   font-size: 30px;
+   color: #fff;
+   font-weight: 900;
+   line-height: 300px;
+   text-align: center;
+}
+.LectureList-header{
+    max-width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: 0%;
+    margin-bottom: 100px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+       url('/public/about_header_image.jpg');
+ }
+
+.popular{
+   background-color: aliceblue;
+}
+
+.popular-lecture{
+   width: 90% !important;
+   position: relative;
+   margin: 0 auto !important;
+}
+
+.entire-lecture{
+   width: 100%;
+   background-color: #fff;
+}
+
+.main-lecture, .best-lecture, .recommend-lecture{
+   width: 80% !important;
+   height: 470px;
+   position: relative;
+   margin: 50px auto !important;
+}
+
+.entire-lecture .bhRnqO{
+   /* 오른쪽 화살표 표시안함 */
+   display: none;
+}
+
+.entire-lecture .kVtMtA{
+   /* 왼쪽 화살표 표시 안함 */
+   display: none;
+}
+
+.bhRnqO{
+   right: -4% !important;
+}
+
+.kVtMtA{
+   left: -4% !important;
+}
+
+
+
+@media (max-width: 464px){
+/* 인기강좌 반응형 크기 조절 */
+.hLycdF {
+    grid-template-columns: repeat(4, 83%) !important;
+    padding-left: 0 !important;
+}
+
+.popular{
+   height: 14%;
+   padding-top: 5%;
+   padding-bottom: 5%;
+}
+
+.bWFaMA{
+   grid-template-columns: repeat(4,89%);
+}
+
+
+.popular-lecture .hLycdF{
+   grid-template-columns: repeat(2, 90%) !important;
+}
+
+.bhRnqO{
+   display: none;
+}
+
+.main-lecture, .best-lecture, .recommend-lecture{
+   margin: 8% auto !important;
+   height: 100%;
+
+}
+
+.popular-lecture-header{
+   position: relative;
+   padding-top: 10%;
+   top: 6%;
+}
+
+.popular-lecture{
+   padding: 0 0% 9% 3%;
+}
+}
+
+
+@media (min-width:1024px){
+   .popular-lecture{
+      margin: 0 auto !important;
+      width: 80% !important;
+      padding-top: 5% !important;
+      padding-bottom: 5% !important;
+      
+      
+   }
+
+   .card-title{
+      text-align: center;
+      padding-top: 3% !important;
+   }
+
+   .popular-lecture .bWFaMA{
+      grid-template-columns: repeat(4,1fr);
+      padding-bottom: 3% !important;
+   }
+
+
+   .bhRnqO{
+      top: calc(50% - 17.5px);
+   }
+ 
+   .kVtMtA{
+      top: calc(50% - 17.5px);
+   }
+
+
+   .main-lecture, .best-lecture, .recommend-lecture{
+      height: 38% !important;
+      margin: 5% auto !important;
+   }
+
+   .main-lecture-header, .best-lecture-header, .recommend-lecture-header{
+      margin-top: 3%;
+   }
+}
+
+@media (max-width:1023px) and (min-width:768px) {
+   .bWFaMA{
+     
+      grid-template-rows: 1fr;
+   }
+   .bhRnqO{
+      display: none;
+   }
+   .kVtMtA{
+      display: none;
+   }
+   .bghjHX{
+      height: 50%;
+    line-height: 50%;
+
+   }
+
+   .main-lecture, .best-lecture, .recommend-lecture {
+      margin: 0 auto !important;
+      height: 35%;
+      width: 90% !important;
+      padding-top: 5%;
+    padding-bottom: 5%;
+   }
+
+  .entire-lecture .bghjHX {
+   overflow: visible;
+  }
+
+  .popular-lecture{
+   margin: 0 auto !important;
+   /* height: 335px; */
+
+  }
+
+  .popular-lecture-header{
+   padding-top: 40px;
+}
+.popular{
+   margin-bottom: 50px !important;
+   padding-bottom: 50px !important;
+}
+
+.qFTwe{
+   overflow: visible;
+}
+
+.bqyzQp{
+   
+   height: 125%;
+}
+
+.popular-lecture .bqyzQp{
+   height: 140%;
+}
+
+.hLycdF{
+   grid-template-columns: repeat(4,75%);
+}
+
+
+
+}
+
+@media (max-width:767px) and (min-width:465px){
+   .bWFaMA{
+      grid-template-columns: repeat(4,33%) !important;
+   }
+
+   .bWFaMA:last-of-type > :last-of-type {
+      padding-right: 0px;
+      margin-right: 0px;
+  }
+   .popular-lecture{
+      margin: 0 auto !important;
+   }
+
+   .popular-lecture-header{
+      padding-top: 6%;
+      padding-bottom: 6%;
+   }
+
+   .qFTwe{
+      grid-template-columns: repeat(1,100%);
+   }
+
+   .popular{
+      height: 20%;
+   }
+
+   .main-lecture{
+      margin: 50px auto;
+   }
+
+   .best-lecture, .recommend-lecture{
+      margin: 0 auto;
+   }
+
+   .main-lecture, .best-lecture, .recommend-lecture {
+      height: 30%;
+      margin-bottom: 6%;
+   }
+
+   .LectureList{
+      height: 230vh;
+   }
+
+   .popular-lecture{
+      height: 15%;
+      margin: 0px auto !important;
+      
+   }
+   
+   .bWFaMA{
+      grid-template-columns: repeat(4,25%) !important;
+   }
+
+   .main-lecture, .best-lecture, .recommend-lecture .hLycdF{
+      grid-template-columns: repeat(4,50%) !important;
+   }
+
+   .hLycdF{
+      grid-template-columns: repeat(4,80%);
+   }
+   
+   a{
+      height: 87% !important;
+   }
+}
+
+
+div.list-group-item{
+   height: 330px;
+}
+

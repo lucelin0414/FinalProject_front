@@ -1,0 +1,93 @@
+/* 초기화 */
+@charset "utf=8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   text-decoration: none;
+   word-break: keep-all;
+   font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+footer{
+    min-height: 210px;
+    background-color: #46433D;
+}
+
+.contents{
+    max-width: 1440px !important;
+    margin: 0 auto !important;
+    padding-top: 34px;
+    float: left;
+}
+.contents_img{
+    float: right;
+    margin-top: 130px;
+}
+.contents_img > a {
+    padding: 5px;
+}
+.contents_img > a > img{
+    width: 45px;
+    height: 45px;
+}
+
+.first_footer{
+    padding: 16px 16px 0px 16px;
+    float: left;
+}
+
+.h1{
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: #fff ;
+}
+
+.h4{
+    font-size: 12px !important;
+    color: rgb(184, 179, 175) !important;
+    font-weight: 100 !important;
+    line-height: 20px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.con_footer {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+/*  SNS로고 */
+.seceond_footer{
+    float: right !important;
+    width: 30% !important;
+    padding-top: 10px !important;
+}
+    
+.sns_logo>a>img {
+        width: 20px !important;
+        margin-left: 20px !important;
+        float: right !important; 
+}
+
+
+@media (min-width: 1440px) {
+
+    .first_footer{
+        padding: 0px !important;
+    }
+
+    .con_footer{
+        padding-top: 36px;
+    }
+  }
+  
+@media (max-width:460px) {
+    .contents_img{
+        display: none;
+    }
+}

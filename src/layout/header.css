@@ -1,0 +1,121 @@
+/* 초기화 */
+@charset "utf=8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   text-decoration: none;
+   word-break: keep-all;
+   font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 본문 */
+
+/* 헤더 */
+header{
+    height: 80px ;
+    background-color: #fff;
+    max-width: 1440px !important;
+    margin: 0 auto !important;
+}
+
+.container{
+    max-width: 1440px !important;
+    background-color: #fff;
+}
+
+.nav_right{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.navbar{
+    padding: 0px !important;
+}
+
+/* 로고 */
+
+.navbar-brand{
+    padding: 5px 0px 5px 16px !important;
+}
+.navbar-brand img{
+    height: 36px;
+    width: cover !important;
+    margin: 15px 0px 0px 0px !important;
+    padding: 0px !important;
+    vertical-align: top !important;
+}
+
+.login > .login_link{
+   padding-left: 100px !important;
+}
+
+/* 드랍다운 메뉴 설정 변경 */
+.dropdown{
+    margin-left: 70px;
+}
+
+.dropdown-menu{
+    background-color: #fff !important;
+    border: 1px solid black !important;
+    margin-top: 14px !important;
+}
+
+.dropdown-menu li{
+    padding: 6px 0px 6px 0px;
+}
+
+.dropdown-menu li a {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 400;
+}
+
+
+@media (min-width: 985px) {
+
+    .dropdown{
+        margin-left: 40px;
+    }    
+}
+
+
+
+@media (min-width: 1130px) {
+
+    .dropdown{
+        margin-left: 50px;
+    }    
+}
+
+@media (min-width: 1200px) {
+
+    .dropdown{
+        margin-left: 70px;
+    }
+
+    
+}
+
+@media (min-width: 1310px) {
+
+    .dropdown{
+        margin-left: 100px;
+    }
+}
+
+
+@media (min-width: 1440px) {
+
+    .navbar-brand{
+        padding: 5px 0px 5px 0px !important;
+    }
+}
+
+/* 로그아웃 부분 */
+.myLogout{
+    text-align: center;
+}

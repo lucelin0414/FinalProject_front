@@ -1,0 +1,40 @@
+.pagination{
+    position: absolute;
+    left: 45%;
+    margin-top: 50px;
+}
+
+.write{
+    float: right;
+}
+
+Table > thead > tr > th{
+    text-align: center !important;
+    line-height: 40px;
+}
+
+Table > tbody > tr > td{
+    text-align: center !important;
+    line-height: 50px;
+}
+
+Table > tbody > tr > td > a{
+    color: black;
+}
+
+Table > tbody > tr > td > a:hover{
+    font-weight: bold;
+    color: black;
+}
+
+.search{
+    float: right !important;
+}
+
+.update{
+    margin-top: 0;
+}
+
+.delete{
+    margin-top: 0;
+}

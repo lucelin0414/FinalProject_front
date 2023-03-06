@@ -1,0 +1,51 @@
+.registLec{
+    font-size: 300%;
+    border-bottom: 2px solid rgba(0, 0, 0, 1);
+    font-weight: bold;
+}
+.LectureLeft{
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    
+}
+.leftArea{
+    padding: 60px 20px 40px 20px;
+}
+
+.LectureHead>h3{
+    font-weight: bold;
+}
+
+.LectureArea{
+    text-align: center;
+}
+.LectureArea>img{
+    margin-bottom: 20px;
+}
+
+.LectureArea>h5{
+    font-weight: bold;
+}
+
+.LectureArea>span{
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+.caution > p{
+    text-align: center;
+    margin-top: 30px;
+    color: red;
+}
+
+
+.LectureImage{
+    text-align: center;
+}
+
+.LectureTable{
+    margin-top: 20px;
+}
+
+.rightArea{
+    padding: 60px 20px 40px 20px;
+}
