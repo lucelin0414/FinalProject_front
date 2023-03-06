@@ -1,0 +1,127 @@
+@media (min-width : 700px) {
+   #map{
+       height: 500px !important;
+   }
+}
+
+@media (min-width : 1000px) {
+  .text1, .text2{
+    padding: 0px !important;
+ }
+}
+
+@media (min-width : 1300px) {
+  #map{
+      height: 600px !important;
+  }
+}
+
+.text1, .text2{
+  padding: 0px 16px 0px 16px;
+}
+
+.location_box{
+   text-align: center;
+   margin-bottom: 100px !important;
+}
+
+.location_box>div{
+   margin: 0 auto !important;
+}
+
+.page_header{
+  width: 100%
+}
+
+.location_header{
+  max-width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: 0%;
+  margin-bottom: 140px !important;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+     url('/public/img/location.jpg');
+}
+
+.name {
+   display: block;
+   font-size: 1.17em;
+   margin-block-start: 1em;
+   margin-block-end: 1em;
+   margin-inline-start: 0px;
+   margin-inline-end: 0px;
+   font-weight: bold;
+   color: #a60000;
+}
+
+.name2 {
+
+   font-size: 1.17em;
+   margin-block-start: 1em;
+   margin-block-end: 1em;
+   margin-inline-start: 0px;
+   margin-inline-end: 0px;
+   font-weight: bold;
+   color: #fff;
+   background-color: #46433D;
+}
+
+.comeText {
+   font-size: 30px;
+   color: #fff;
+   font-weight: 900;
+   line-height: 300px;
+   text-align: center;
+}
+
+.text1 {
+   text-align: left;
+   max-width: 1300px;
+   height: 100%;
+   margin: 0 auto;
+   margin-bottom: 30px;
+   margin-left: 16px;
+   margin-right: 16px;
+}
+
+.text2 {
+   text-align: left;
+   max-width: 1300px;
+   margin: 40px 0px 140px 0px !important;
+}
+
+/* 지도 */
+#map{
+  max-width: 1300px !important;
+  min-height: 300px !important;
+  margin-top: 20px !important;
+}
+
+
+.announce {
+   font-size: 11pt;
+   font-weight: 300;
+   line-height: 1.7;
+   color: #7c7c7c;
+   padding-left: 30px;
+       margin-top: 5px;
+}
+
+.announce2 {
+   font-size: 11pt;
+   font-weight: 400;
+   line-height: 1.7;
+   color: #333333;
+   padding-left: 30px;
+   margin: 10px 0px 30px 0px !important;
+}
+
+.announce2 > thin {
+   font-size: 10pt;
+   color: #7c7c7c;
+   line-height: 1;
+}
+
+.announce2 > a {
+   color: #333333;
+}
