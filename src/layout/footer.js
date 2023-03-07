@@ -8,7 +8,7 @@ const Footer = () => {
             <Container fluid="sm">
                 <div className="con_footer">
                     <div className="first_footer">
-                        <p className="h1">구로 문화센터</p>
+                        <p className="h1">川星</p>
                         <p className="h4">
                         대표자 | 홍길동 <br/>
                         전화 | 02-488-4888 <br/>
