@@ -12,11 +12,11 @@ const Header = () => {
     
     // 로그인,로그아웃
     const [isLogin, setIsLogin] = useState(false)
-    const name = sessionStorage.name
+    const id = sessionStorage.id
         // 로그인 상태 관리
         
          useEffect(() => {
-           if(sessionStorage.getItem('member_id') === null){
+           if(sessionStorage.getItem('id') === null){
              console.log('isLogin ?? :: ', isLogin)
            } else {
            // 로그인 상태 변경
@@ -28,7 +28,7 @@ const Header = () => {
          const onLogout = () => {
             alert("로그아웃 되셨습니다.");
             // sessionStorage에 저장되어있는 아이템을 삭제한다.
-            sessionStorage.removeItem('member_id')
+            sessionStorage.removeItem('id')
             sessionStorage.removeItem('name')
 
             // App 으로 이동(새로고침)
@@ -116,7 +116,7 @@ const Header = () => {
                         <li class="nav-item dropdown login">
                             {isLogin 
                             ?   <div className='myLogout'>
-                                    <label for="logOut">{name}님 환영합니다</label>
+                                    <label for="logOut">{id}님 환영합니다</label>
                                     <a id='logOut' class="nav-link" href="#" onClick={onLogout}>로그아웃</a>
                                 </div>
                             :   <Link to="/Login">

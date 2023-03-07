@@ -36,12 +36,12 @@ const Login = () =>  {
       var submitYN = true;
       
       const form = new FormData()
-        form.append('memberId', memberId)
-        form.append('memberPw', memberPw)
+        form.append('id', memberId)
+        form.append('pw', memberPw)
       
         console.log("click login");
 
-			axios.post('http://localhost:9008/loginAction.do', 
+			axios.post('/work/user/login.do', 
           form
         ,{ 
           headers:{ 
@@ -50,20 +50,20 @@ const Login = () =>  {
         }
         )
       .then((res) => {
-          console.log(res.data);
+          console.log(res);
 
-          if(res.data != "N"){
-            alert(res.data + "회원님, 환영합니다");
-            sessionStorage.setItem("member_id", memberId); // sessionStorage에 id 저장
+          if(res.data != null){
+            alert("환영합니다!");
+            sessionStorage.setItem("id", memberId); // sessionStorage에 id 저장
             sessionStorage.setItem("name", res.data); // sessionStorage에 name 저장
-            document.location.href="/"
+            document.location.href="http://localhost:9005/work/product/goMain.do"
           }else{
             alert("회원정보 가입을 해주세요");
             document.location.href = "/login";
           }
         })
           .catch()
-        
+
     }
 		
 	}
@@ -92,9 +92,9 @@ const Login = () =>  {
                             <div className="form-group d-grid gap-2 mt-4">
                                 <Button id="id_btn" variant="primary" size='lg' onClick={fn_signIn}>로그인</Button>
                             </div>
-                            <div id="pw_btn" className="form-group d-grid ">
-                                  <Button variant="secondary" size='lg' >회원가입</Button>
-                            </div>
+                              <Link to="/SignUp" id="pw_btn" className="form-group d-grid ">
+                                <Button variant="secondary" size='lg' >회원가입</Button>
+                              </Link>
                         </Form>
                     </Col>
                 </Row>
