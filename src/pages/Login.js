@@ -8,9 +8,11 @@ import Col from 'react-bootstrap/Col';
 import "../css/login.css";
 import axios from 'axios';
 import { Input } from 'reactstrap';
+import { useCookies } from 'react-cookie';
 
 const Login = () =>  {
 
+  const [cookies, setCookie ] = useCookies([]);
 
   const fn_signIn = () => {
     var submitYN = false;
@@ -56,6 +58,7 @@ const Login = () =>  {
             alert("환영합니다!");
             sessionStorage.setItem("id", memberId); // sessionStorage에 id 저장
             sessionStorage.setItem("name", res.data); // sessionStorage에 name 저장
+            setCookie('login', { path: "/" } );
             document.location.href="http://localhost:9005/work/product/goMain.do"
           }else{
             alert("회원정보 가입을 해주세요");
