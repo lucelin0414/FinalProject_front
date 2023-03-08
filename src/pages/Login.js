@@ -58,8 +58,7 @@ const Login = () =>  {
             alert("환영합니다!");
             sessionStorage.setItem("id", memberId); // sessionStorage에 id 저장
             sessionStorage.setItem("name", res.data); // sessionStorage에 name 저장
-            setCookie('login', { path: "/" } );
-            document.location.href="http://localhost:9005/work/product/goMain.do"
+            document.location.href="/"
           }else{
             alert("회원정보 가입을 해주세요");
             document.location.href = "/login";

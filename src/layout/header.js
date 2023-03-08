@@ -5,20 +5,18 @@ import "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.mi
 import { Link } from "react-router-dom";
 import { Button } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react';
-import { useCookies } from 'react-cookie';
 
 
 const Header = () => {
     
     // 로그인,로그아웃
     const [isLogin, setIsLogin] = useState(false)
-    const [cookies, getCookie, removeCookie] = useCookies([]);
     const id = sessionStorage.id
 
         // 로그인 상태 관리
         
          useEffect(() => {
-           if(getCookie('login') === null){
+           if(sessionStorage.getItem('id') === null){
              console.log('isLogin ?? :: ', isLogin)
            } else {
            // 로그인 상태 변경
@@ -32,7 +30,6 @@ const Header = () => {
             // sessionStorage에 저장되어있는 아이템을 삭제한다.
             sessionStorage.removeItem('id')
             sessionStorage.removeItem('name')
-            removeCookie('login')
             // App 으로 이동(새로고침)
             document.location.href = '/'
         }

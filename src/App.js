@@ -20,7 +20,6 @@ function App(){
     
     <>
       <Header />
-        <BrowserRouter>
           <Switch>
             <Route exact path="/BoardList" component={BoardList} />
             <Route exact path="/LectureList" component={LectureList} />
@@ -34,7 +33,6 @@ function App(){
             <Route exact path="/" component={Main} />
             
           </Switch>
-        </BrowserRouter>
         
           
 
