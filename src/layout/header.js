@@ -12,11 +12,12 @@ const Header = () => {
     // 로그인,로그아웃
     const [isLogin, setIsLogin] = useState(false)
     const id = sessionStorage.id
+    const name = sessionStorage.name
 
         // 로그인 상태 관리
         
          useEffect(() => {
-           if(sessionStorage.getItem('id') === null){
+           if(sessionStorage.getItem('name') === null){
              console.log('isLogin ?? :: ', isLogin)
            } else {
            // 로그인 상태 변경
@@ -115,7 +116,7 @@ const Header = () => {
                         <li class="nav-item dropdown login">
                             {isLogin 
                             ?   <div className='myLogout'>
-                                    <label for="logOut">{id}님 환영합니다</label>
+                                    <label for="logOut">{name}님 환영합니다</label>
                                     <a id='logOut' class="nav-link" href="#" onClick={onLogout}>로그아웃</a>
                                 </div>
                             :   <Link to="/Login">
