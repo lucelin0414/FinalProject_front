@@ -53,7 +53,7 @@ const Login = () =>  {
       .then((res) => {
           console.log(res);
 
-          if(res.data != null){
+          if(res.data != "N"){
             alert(res.data + "님 환영합니다!");
             sessionStorage.setItem("id", id); // sessionStorage에 id 저장
             sessionStorage.setItem("name", res.data); // sessionStorage에 name 저장
