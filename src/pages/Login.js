@@ -8,10 +8,25 @@ import Col from 'react-bootstrap/Col';
 import "../css/login.css";
 import axios from 'axios';
 import { Input } from 'reactstrap';
-import { useCookies } from 'react-cookie';
+import NaverLogin from "react-login-by-naver";
 
 const Login = () =>  {
+  //네이버로그인성공시 호출되는 함수
+  const history = useHistory(); // 라우팅을 위한 히스토리 객체
+  const responseLogin = (res, type) => {
+    const id = res.id;    
+    const name = res.name;
+    const email = res.email;
 
+    let form = new FormData();
+    form.append("id", id);    
+    form.append("name", name);
+    form.append("email", email);
+
+    axios
+      .post("http://localhost:9008/naver.do", form)
+      .then(history.push("/SuccessInfo"));
+  };
 
   const fn_signIn = () => {
     var submitYN = false;
@@ -69,6 +84,9 @@ const Login = () =>  {
 		
 	}
 
+
+
+
     return (
         <>
         <div class="page_header">
@@ -92,10 +110,18 @@ const Login = () =>  {
                             
                             <div className="form-group d-grid gap-2 mt-4">
                                 <Button id="id_btn" variant="primary" size='lg' onClick={fn_signIn}>로그인</Button>
-                            </div>
-                              <Link to="/SignUp" id="pw_btn" className="form-group d-grid ">
-                                <Button variant="secondary" size='lg' >회원가입</Button>
-                              </Link>
+                                <NaverLogin
+                                clientId="TqmqLYaibwM6DQg6GDEZ"   // 옆에 네이버 클라이언트 ID 수정 바랍니다
+                                callbackUrl="http://localhost:3000"
+                                render={(props) => (
+                                    <div onClick={props.onClick}>
+                                        <img src="/naver-login.PNG" alt="네이버로그인이미지" />
+                                    </div>
+                                )}
+                                onSuccess={(res) => responseLogin(res, "naver")}
+                                onFailure={() => console.log("naver login fail")}
+                                />
+                              </div>
                         </Form>
                     </Col>
                 </Row>

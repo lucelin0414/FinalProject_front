@@ -11,6 +11,7 @@ import BoardList from "./pages/BoardList";
 import Faq from "./pages/Faq";
 import Promote from "./pages/Promote"
 import Registration from "./pages/Registration";
+import SuccessInfo from "./pages/SuccessInfo";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -21,10 +22,11 @@ function App(){
     <>
       <Header />
           <Switch>
+            <Route exact path="/SuccessInfo" component={SuccessInfo} />
+            <Route exact path="/Login" component={Login} />
             <Route exact path="/BoardList" component={BoardList} />
             <Route exact path="/LectureList" component={LectureList} />
             <Route exact path="/about" component={about} />
-            <Route exact path="/Login" component={Login} />
             <Route exact path="/registration" component={Registration} />
             <Route exact path="/location" component={Kakaomap} />
             <Route exact path="/Faq" component={Faq} />
