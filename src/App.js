@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
 import InputForm from "./views/InputForm";
 import Main from "./views/Main";
 import Header from "./layout/header";
@@ -18,7 +18,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App(){
 
   return(
-    
     <>
       <Header />
           <Switch>
@@ -33,14 +32,7 @@ function App(){
             <Route exact path="/Promote" component={Promote} />
             <Route exact path="/:crud" component={InputForm} />
             <Route exact path="/" component={Main} />
-            
           </Switch>
-        
-          
-
-      
-      
-      
       <Footer />
     </>
 

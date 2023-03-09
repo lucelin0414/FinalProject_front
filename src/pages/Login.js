@@ -10,7 +10,7 @@ import axios from 'axios';
 import { Input } from 'reactstrap';
 import NaverLogin from "react-login-by-naver";
 
-const Login = () =>  {
+function Login () {
   //네이버로그인성공시 호출되는 함수
   const history = useHistory(); // 라우팅을 위한 히스토리 객체
   const responseLogin = (res, type) => {
@@ -25,7 +25,10 @@ const Login = () =>  {
 
     axios
       .post("http://localhost:9008/naver.do", form)
-      .then(history.push("/SuccessInfo"));
+      .then(
+        alert("네이버 아이디로 로그인 되었습니다."),
+        sessionStorage.setItem("name", name),
+        history.push("/"));
   };
 
   const fn_signIn = () => {
@@ -112,10 +115,10 @@ const Login = () =>  {
                                 <Button id="id_btn" variant="primary" size='lg' onClick={fn_signIn}>로그인</Button>
                                 <NaverLogin
                                 clientId="TqmqLYaibwM6DQg6GDEZ"   // 옆에 네이버 클라이언트 ID 수정 바랍니다
-                                callbackUrl="http://localhost:3000"
+                                callbackUrl="http://localhost:3000/Login"
                                 render={(props) => (
                                     <div onClick={props.onClick}>
-                                        <img src="/naver-login.PNG" alt="네이버로그인이미지" />
+                                        <img src="/naver-login.PNG" alt="네이버로그인이미지" className='my_naver' />
                                     </div>
                                 )}
                                 onSuccess={(res) => responseLogin(res, "naver")}

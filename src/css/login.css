@@ -127,6 +127,12 @@ body {
 }
 
 /*  */
-#memberId, #memberPw{
+#id, #pw{
   height: 48px;
+}
+
+.my_naver{
+  width: 100%;
+  height: 48px;
+  border-radius: 5px;
 }
