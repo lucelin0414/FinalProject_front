@@ -28,7 +28,7 @@ function Login () {
       .then(
         alert("네이버 아이디로 로그인 되었습니다."),
         sessionStorage.setItem("name", name),
-        history.push("/"));
+        document.location.href = "/");
   };
 
   const fn_signIn = () => {
