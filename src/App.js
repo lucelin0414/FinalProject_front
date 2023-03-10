@@ -12,6 +12,7 @@ import Faq from "./pages/Faq";
 import Promote from "./pages/Promote"
 import Registration from "./pages/Registration";
 import SuccessInfo from "./pages/SuccessInfo";
+import aboutus from "./pages/aboutus";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -21,6 +22,7 @@ function App(){
     <>
       <Header />
           <Switch>
+            <Route exact path="/AboutUs" component={aboutus} />
             <Route exact path="/SuccessInfo" component={SuccessInfo} />
             <Route exact path="/Login" component={Login} />
             <Route exact path="/BoardList" component={BoardList} />
