@@ -50,7 +50,7 @@ const Kakaomap = () => {
           </div>
           
           <div className='text1_loc'>
-            <span className='name2_loc'>&nbsp;카페 만성회&nbsp;</span>
+            <span className='name2_loc'>&nbsp;카페 천성&nbsp;</span>
             <p className="announce_loc">
                <strong> ▷ 서울특별시 구로구 구로2동 4, 202호</strong><br />
                   방문 시에는 반드시 마스크를 착용해 주시고, 코로나19 방역수칙을 지켜주시기
@@ -104,7 +104,7 @@ const Kakaomap = () => {
           <br />
 
           <div className='text2_loc'>
-            <span class="name2_loc"><br /> <br />&nbsp;카페 만성회 주차장 안내&nbsp;</span>
+            <span class="name2_loc"><br /> <br />&nbsp;카페 천성 주차장 안내&nbsp;</span>
               <p class="announce2_loc">
                   ▷ 주차공간이 많이 부족하오니 되도록 대중교통을 이용해 주시기 바랍니다.<br />
                   ▷ 주차정보안내시스템(<a href="http://parking.seoul.go.kr/"

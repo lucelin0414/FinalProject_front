@@ -54,7 +54,7 @@ const Header = () => {
                             <a class="nav-link dropdown-toggle main_nav" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <Link to="/about">
+                                    <Link to="/AboutUs">
                                         <a class="dropdown-item">회사소개</a>
                                     </Link>
                                 </li>
