@@ -8,6 +8,8 @@ class CafeRequest extends Component {
         this.state ={
             board: []
         }
+
+        this.createBoard = this.createBoard.bind(this);
     }
 
     componentDidMount(){
@@ -16,10 +18,17 @@ class CafeRequest extends Component {
         });
     }
 
+    createBoard(){
+        this.props.history.push('/CreateCafeBoard/');
+    }
+
     render() {
         return (
             <div>
-                <h2 className="text-center">Boards List</h2>
+                <h2 className="text-center">카페 커미션 요청 게시판</h2>
+                <div className = "row">
+                    <button className="btn btn-primary" onClick={this.createBoard}>글 작성</button>
+                </div>
                 <div className ="row">
                     <table className="table table-striped table-bordered">
                         <thead>
