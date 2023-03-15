@@ -125,3 +125,9 @@
 .announce2 > a {
    color: #333333;
 }
+
+
+/* 수정 */
+Table > tbody > tr > td{
+   line-height: 20px !important;
+}

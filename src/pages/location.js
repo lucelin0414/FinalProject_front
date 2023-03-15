@@ -66,7 +66,7 @@ const Kakaomap = () => {
             <Table bordered>
               <tbody>
                 <tr>
-                  <th className='table-light' scope="row">
+                  <th className='table-light' scope="center">
                     주소
                   </th>
                   <td>
