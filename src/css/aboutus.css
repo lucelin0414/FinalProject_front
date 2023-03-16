@@ -106,6 +106,7 @@
 .about_img{
     max-width: 345px;
     height: auto;
+    margin-bottom: 10px;
 }
 
 
@@ -136,13 +137,22 @@
     margin: 0 auto !important;
 }
 
+.con3_2nd_about{
+    background-image: url('/public/img/about_banner.jpg') !important;
+    max-width: 600px;
+    min-height: 400px;
+    background-size: cover;
+    margin: 0 auto !important;
+}
+
+
 .con3_2st_about{
     background-color: rgb(255, 215, 162);
     min-height: 400px;
 }
 
 /* 폰트 */
-.con3_ann_box{
+.con3_ann_box, .con3_ann_box_2{
     padding: 10px 16px;
 }
 .con3_head_about{
@@ -152,20 +162,20 @@
     font-weight: 900 !important;
 }
 
-.con3_ann1{
+.con3_ann1, .con3_ann1_2{
     font-size: 20px;
     font-weight: 700;
     text-align: center;
 }
 
-.con3_ann2{
+.con3_ann2, .con3_ann2_2{
     text-align: center;
     font-size: 16px;
     color: #434749;
 }
 
 /* 로고이미지 */
-.logoImg_con3{
+.logoImg_con3, .logoImg_con3_2{
     text-align: center;
 }
 
@@ -180,6 +190,7 @@
 
 /* 미디어쿼리 */
 @media (min-width: 745px) {
+    /* 컨텐츠2 */
     .content2_about{
         display: flex;
         justify-content: center;
@@ -187,6 +198,134 @@
     }
 
     .con1_img_about{
-        padding: 20px 16px 20px 16px;
+        padding: 20px 16px 0px 16px;
     }
+
+    /* 컨텐츠3 */
+    /* box1 */
+    .con3_1st_about{
+        width: 600px;
+        height: 400px;
+        background-size: cover;    
+        margin: 0px 40px 0px 0px !important;
+    }
+    
+    .con3_ann_box{
+        height: 400px;
+    }
+
+    .con3_1st_box{
+        max-width: 1200px;
+        display: flex;
+    }
+
+    .con3_ann1, .logoImg_con3, .con3_ann2{
+        text-align: left;
+    }
+
+
+    /* box2 */    
+    .con3_2nd_about{
+        width: 600px;
+        height: 400px;
+        background-size: cover;    
+        margin: 0px 0px 0px 40px !important;
+    }
+
+    .con3_2nd_box{
+        max-width: 1440px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .con3_ann1_2, .logoImg_con3_2, .con3_ann2_2{
+        text-align: right;
+    }
+
+    .con3_ann_box_2{
+        height: 400px;
+    }
+
+    .icon_logo_con3{
+        width: 50px;
+        margin: 60px 0px 6px 0px;
+    }
+
+
+}
+
+
+
+@media (min-width: 1200px) {
+    /* 컨텐츠2 */
+    .content2_about{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .con1_img_about{
+        padding: 20px 16px 0px 16px;
+    }
+
+    /* 컨텐츠3 */
+    /* box1 */
+    .con3_1st_about{
+        width: 600px;
+        height: 400px;
+        background-size: cover;    
+        margin: 0px 40px 0px 0px !important;
+    }
+    
+    .con3_ann_box{
+        height: 400px;
+    }
+
+    .con3_1st_box{
+        max-width: 1200px;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto !important;
+    }
+
+    .con3_ann1, .logoImg_con3, .con3_ann2{
+        text-align: left;
+    }
+
+
+    /* box2 */    
+    .con3_2nd_about{
+        width: 600px;
+        height: 400px;
+        background-size: cover;    
+        margin: 0px 0px 0px 40px !important;
+    }
+
+    .con3_2nd_box{
+        max-width: 1200px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        margin: 0 auto !important;
+        padding-bottom: 140px;
+    }
+
+    .con3_ann1_2, .logoImg_con3_2, .con3_ann2_2{
+        text-align: right;
+    }
+
+    .con3_ann_box_2{
+        height: 400px;
+    }
+
+    .con3_box_about{
+        margin:  0 auto !important;
+    }
+
+    .icon_logo_con3{
+        width: 50px;
+        margin: 80px 0px 6px 0px;
+    }
+
+
 }
