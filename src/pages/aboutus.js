@@ -7,12 +7,21 @@ class aboutus extends Component {
     render() {
         return (
             <div className='contain_about'>
+                
+                {/* 시작문구 */}
+                <div className='main_about'>
+                    <div className='logoImg_main'>
+                        <img src="img/icon_logo.png" alt="logo" className='icon_logo_main' />
+                    </div>
+                    <p class="ann_name_about">별의 강을 담아낸 카페,</p>
+                    <div className='logoImg_main'>
+                        <img src="img/logo_word.png" alt="logo" className='icon_word_main' />
+                    </div>
+                </div>
+                
                 {/* 페이지 헤더 */}
                 <div class="page_header">
                     <div class="about_header">
-                        <div class="name">
-                                <p class="comeText">회사소개</p>
-                        </div>
                     </div>
                 </div>
                 {/* 페이지 헤더 끝 */}
