@@ -1,36 +1,39 @@
-@charset "utf=8";
+/* 초기화 */
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
+* {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   text-decoration: none;
+   word-break: keep-all;
+   font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+/* 컨테이너 설정 */
+.contain_about{
+    width: 100%;
+}
+
+/* 페이지헤더 */
+.about_header{
+    max-width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: 0%;
+    margin-bottom: 100px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+       url('/public/img/login_header.jpg') !important;
+ }
+  
+
+
+/* 본문 */
 .main_about{
-    text-align: center;
-    background-color: aliceblue;
-}
-
-.imgbox_about{
-    padding-top: 80px;
-}
-
-.content_about{
-    padding-top: 50px;
-    font-size: 16px;
-}
-
-.content_about>p{
-    line-height: 300%;
-}
-
-.content_subject_about{
-    margin-top: 50px !important;
-    margin-bottom: 50px !important;
-    line-height: 300% !important;
-}
-
-.content_subject_about>h3{
-    font-weight: bold;
-    color: rgb(0, 74, 152);
-}
-
-.contact_us_about{
-    padding-bottom: 50px !important;
-    font-size: 20px;
-    line-height: 300%;
+    max-width: 1440px;
+    margin: 0 auto !important;
+    background-color: aqua;
+    min-height: 200px;
 }
