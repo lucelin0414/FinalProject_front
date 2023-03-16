@@ -179,3 +179,14 @@
 
 
 /* 미디어쿼리 */
+@media (min-width: 745px) {
+    .content2_about{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .con1_img_about{
+        padding: 20px 16px 20px 16px;
+    }
+}

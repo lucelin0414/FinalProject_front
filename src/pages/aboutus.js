@@ -37,8 +37,8 @@ class aboutus extends Component {
 
 
                 {/* 컨텐츠2 시작 */}
+                <p class="con3_head_about"> 카페 천성은 약속합니다. </p>
                 <div className='content2_about'>
-                    <p class="con3_head_about"> 카페 천성은 약속합니다. </p>
                     <div className='con1_img_about'>
                         <img src="img/about_img1.png" alt="logo" className='about_img' />
                     </div>
