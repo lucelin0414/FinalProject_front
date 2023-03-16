@@ -34,8 +34,9 @@ class aboutus extends Component {
                 </div>
                 {/* 컨텐츠1 끝 */}
 
-                {/* 본문 시작 */}
+                {/* 컨텐츠2 시작 */}
                 <div className='main_about'>
+
 
                 </div>
 
