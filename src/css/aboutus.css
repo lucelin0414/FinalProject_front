@@ -1,6 +1,8 @@
 /* 초기화 */
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+
 
 * {
    margin: 0;
@@ -12,21 +14,19 @@
 }
 /* ================================================ */
 
+
 /* 컨테이너 설정 */
-.contain_about{
+.contain_about, .content3_about{
     width: 100%;
 }
   
 
-/* ================================================ */
-
-/* 본문 */
-.main_about{
+.main_about, .content2_about, .con3_box_about{
     max-width: 1440px;
     margin: 0 auto !important;
-    background-color: aqua;
     min-height: 200px;
 }
+
 
 /* ================================================ */
 
@@ -38,12 +38,12 @@
 
 .icon_logo_main{
     width: 50px;
-    margin: 140px 0px 10px 0px;
+    margin: 100px 0px 10px 0px;
 }
 
 .icon_word_main{
     width: 300px;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
 }
 
 /* 상단문구 */
@@ -61,16 +61,17 @@
 
 /* 폰트 */
 .ann_head_about{
-    font-size: 24px !important;
-    font-weight: 900 !important;
-    margin-bottom: 10px !important;
+    font-size: 40px !important;
     text-align: center !important;
     color: #fff;
+    font-family: 'Nanum Brush Script', cursive;
+    line-height: 45px;
+    padding-top: 120px;
 }
 
 .ann_head_about2{
-    font-size: 24px !important;
-    font-weight: 900 !important;
+    font-size: 16px !important;
+    font-weight: 300 !important;
     margin-bottom: 10px !important;
     text-align: center !important;
     color: #fff;
@@ -84,9 +85,97 @@
     background-size: cover;
     background-position: 0%;
     margin-bottom: 100px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
        url('/public/img/about_banner.jpg') !important;
 }
 
 
 /* ================================================ */
+
+
+/* 컨텐츠2 */
+.content2_about{
+    padding: 0px 0px 160px 0px;
+}
+
+/* 이미지 */
+.con1_img_about{
+    text-align: center !important;
+}
+
+.about_img{
+    max-width: 345px;
+    height: auto;
+}
+
+
+/* ================================================ */
+
+
+/* 컨텐츠3 */
+.content3_about{
+    background-color: #E6EAEC;
+    min-height: 200px;
+    padding: 20px 0px 80px 0px;
+}
+
+.con3_1st_box{
+    padding-bottom: 140px;
+}
+
+.con3_2nd_about{
+    padding-bottom: 100px;
+}
+
+/* 이미지 */
+.con3_1st_about{
+    background-image: url('/public/img/about_banner.jpg') !important;
+    max-width: 600px;
+    min-height: 400px;
+    background-size: cover;
+    margin: 0 auto !important;
+}
+
+.con3_2st_about{
+    background-color: rgb(255, 215, 162);
+    min-height: 400px;
+}
+
+/* 폰트 */
+.con3_ann_box{
+    padding: 10px 16px;
+}
+.con3_head_about{
+    padding: 140px 0px 60px 0px;
+    text-align: center;
+    font-size: 24px !important;
+    font-weight: 900 !important;
+}
+
+.con3_ann1{
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.con3_ann2{
+    text-align: center;
+    font-size: 16px;
+    color: #434749;
+}
+
+/* 로고이미지 */
+.logoImg_con3{
+    text-align: center;
+}
+
+.icon_logo_con3{
+    width: 50px;
+    margin: 40px 0px 6px 0px;
+}
+
+
+/* ================================================ */
+
+
+/* 미디어쿼리 */

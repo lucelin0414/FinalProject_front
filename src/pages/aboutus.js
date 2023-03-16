@@ -19,6 +19,7 @@ class aboutus extends Component {
                     </div>
                 </div>
                 {/* 시작문구 끝 */}
+
                 
                 {/* 컨텐츠1 */}
                 <div class="page_header">
@@ -34,12 +35,67 @@ class aboutus extends Component {
                 </div>
                 {/* 컨텐츠1 끝 */}
 
+
                 {/* 컨텐츠2 시작 */}
-                <div className='main_about'>
-
-
+                <div className='content2_about'>
+                    <p class="con3_head_about"> 카페 천성은 약속합니다. </p>
+                    <div className='con1_img_about'>
+                        <img src="img/about_img1.png" alt="logo" className='about_img' />
+                    </div>
+                    <div className='con1_img_about'>
+                        <img src="img/about_img2.png" alt="logo" className='about_img' />
+                    </div>
+                    <div className='con1_img_about'>
+                        <img src="img/about_img3.png" alt="logo" className='about_img' />
+                    </div>                   
                 </div>
+                {/* 컨텐츠2 끝 */}
 
+
+                {/* 컨텐츠3 시작 */}
+                <div className='content3_about'>
+                    <div className='con3_box_about'>
+
+                        <p class="con3_head_about"> 카페 천성, </p>
+                        
+                        <div className='con3_1st_box'> 
+                            <div className='con3_1st_about'> </div>
+                            <div className='logoImg_con3'>
+                                <img src="img/icon_logo.png" alt="logo" className='icon_logo_con3' />
+                            </div>
+                            <div className='con3_ann_box'>
+                                <p class="con3_ann1">
+                                    '트렌드를 선도하는 맛'
+                                </p>
+                                <p class="con3_ann2">
+                                    <br/>
+                                    카페 천성은 새로운 트렌드를 만들어냅니다. <br/>
+                                    별처럼 반짝이는 취향을 담아내기 위해 끊임없이 연구합니다. <br/><br/>
+                                    천성에서 당신만의 별을 찾아내 유행을 선도하세요.
+                                </p>
+                            </div>
+                        </div>                        
+
+                        <div className='con3_2nd_about'>
+                            <div className='con3_1st_about'> </div>
+                            <div className='logoImg_con3'>
+                                <img src="img/icon_logo.png" alt="logo" className='icon_logo_con3' />
+                            </div>
+                            <div className='con3_ann_box'>
+                                <p class="con3_ann1">
+                                    '트렌드를 선도하는 맛'
+                                </p>
+                                <p class="con3_ann2">
+                                    <br/>
+                                    카페 천성은 새로운 트렌드를 만들어냅니다. <br/>
+                                    별처럼 반짝이는 취향을 담아내기 위해 끊임없이 연구합니다. <br/><br/>
+                                    천성에서 당신만의 별을 찾아내 유행을 선도하세요.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* 컨텐츠3 끝 */}
             </div>
 
         );
