@@ -40,7 +40,7 @@ const Header = () => {
         <header>
             <nav className="navbar navbar-expand-lg navbar-light container justify-content-between" id="navbar-example2 contain_head">
                 <ul class="navbar-brand">
-                    <li><a href="/"><img src="img/logo.png" alt="logo" /></a></li>
+                    <li><a href="http://localhost:9005/"><img src="img/logo.png" alt="logo" /></a></li>
                 </ul>
 
                 {/* <!-- 네비게이션 바 --> */}
@@ -78,19 +78,7 @@ const Header = () => {
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle main_nav" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Course</a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <Link to="/LectureList">
-                                        <a class="dropdown-item">강좌 목록</a>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to="/registration">
-                                        <a class="dropdown-item">수강 신청</a>
-                                    </Link>
-                                </li>
-                            </ul>
+                            <a class="nav-link dropdown-toggle main_nav" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                         </li>
 
                         <li class="nav-item dropdown">
