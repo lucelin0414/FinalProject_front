@@ -1,36 +1,335 @@
-@charset "utf=8";
+/* 초기화 */
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
 
-.main_about{
+
+* {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   text-decoration: none;
+   word-break: keep-all;
+   font-family: 'Noto Sans KR', sans-serif;
+}
+/* ================================================ */
+
+
+/* 컨테이너 설정 */
+.contain_about, .content3_about{
+    width: 100%;
+}
+  
+
+.main_about, .content2_about, .con3_box_about{
+    max-width: 1440px;
+    margin: 0 auto !important;
+    min-height: 200px;
+}
+
+
+/* ================================================ */
+
+
+/* 상단 로고 이미지 */
+.logoImg_main{
     text-align: center;
-    background-color: aliceblue;
 }
 
-.imgbox_about{
-    padding-top: 80px;
+.icon_logo_main{
+    width: 50px;
+    margin: 100px 0px 10px 0px;
 }
 
-.content_about{
-    padding-top: 50px;
-    font-size: 16px;
+.icon_word_main{
+    width: 300px;
+    margin-bottom: 100px;
 }
 
-.content_about>p{
-    line-height: 300%;
+/* 상단문구 */
+.ann_name_about{
+    font-size: 24px !important;
+    font-weight: 900 !important;
+    margin-bottom: 10px !important;
+    text-align: center !important;
 }
 
-.content_subject_about{
-    margin-top: 50px !important;
-    margin-bottom: 50px !important;
-    line-height: 300% !important;
+/* ================================================ */
+
+
+/* 컨텐츠1 */
+
+/* 폰트 */
+.ann_head_about{
+    font-size: 40px !important;
+    text-align: center !important;
+    color: #fff;
+    font-family: 'Nanum Brush Script', cursive;
+    line-height: 45px;
+    padding-top: 120px;
 }
 
-.content_subject_about>h3{
-    font-weight: bold;
-    color: rgb(0, 74, 152);
+.ann_head_about2{
+    font-size: 16px !important;
+    font-weight: 300 !important;
+    margin-bottom: 10px !important;
+    text-align: center !important;
+    color: #fff;
 }
 
-.contact_us_about{
-    padding-bottom: 50px !important;
+
+/* 컨텐츠1 이미지 */
+.about_header{
+    max-width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: 0%;
+    margin-bottom: 100px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+       url('/public/img/about_banner2.jpg') !important;
+}
+
+
+/* ================================================ */
+
+
+/* 컨텐츠2 */
+.content2_about{
+    padding: 0px 0px 160px 0px;
+}
+
+/* 이미지 */
+.con1_img_about{
+    text-align: center !important;
+}
+
+.about_img{
+    max-width: 345px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+/* ================================================ */
+
+
+/* 컨텐츠3 */
+.content3_about{
+    background-color: #E6EAEC;
+    min-height: 200px;
+    padding: 20px 0px 80px 0px;
+}
+
+.con3_1st_box{
+    padding-bottom: 140px;
+}
+
+.con3_2nd_about{
+    padding-bottom: 100px;
+}
+
+/* 이미지 */
+.con3_1st_about{
+    background-image: url('/public/img/about_banner.jpg') !important;
+    max-width: 600px;
+    min-height: 400px;
+    background-size: cover;
+    margin: 0 auto !important;
+}
+
+.con3_2nd_about{
+    background-image: url('/public/img/about_banner3.jpg') !important;
+    max-width: 600px;
+    min-height: 400px;
+    background-size: cover;
+    margin: 0 auto !important;
+}
+
+
+.con3_2st_about{
+    background-color: rgb(255, 215, 162);
+    min-height: 400px;
+}
+
+/* 폰트 */
+.con3_ann_box, .con3_ann_box_2{
+    padding: 10px 16px;
+}
+.con3_head_about{
+    padding: 140px 0px 60px 0px;
+    text-align: center;
+    font-size: 24px !important;
+    font-weight: 900 !important;
+}
+
+.con3_ann1, .con3_ann1_2{
     font-size: 20px;
-    line-height: 300%;
+    font-weight: 700;
+    text-align: center;
+}
+
+.con3_ann2, .con3_ann2_2{
+    text-align: center;
+    font-size: 16px;
+    color: #434749;
+}
+
+/* 로고이미지 */
+.logoImg_con3, .logoImg_con3_2{
+    text-align: center;
+}
+
+.icon_logo_con3{
+    width: 50px;
+    margin: 40px 0px 6px 0px;
+}
+
+.con3_2nd_box{
+    padding-bottom: 140px;
+}
+
+
+/* ================================================ */
+
+
+/* 미디어쿼리 */
+@media (min-width: 745px) {
+    /* 컨텐츠2 */
+    .content2_about{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .con1_img_about{
+        padding: 20px 16px 0px 16px;
+    }
+
+    /* 컨텐츠3 */
+    /* box1 */
+    .con3_1st_about{
+        width: 600px;
+        height: 400px;
+        background-size: cover;    
+        margin: 0px 40px 0px 0px !important;
+    }
+    
+    .con3_ann_box{
+        height: 400px;
+    }
+
+    .con3_1st_box{
+        max-width: 1200px;
+        display: flex;
+    }
+
+    .con3_ann1, .logoImg_con3, .con3_ann2{
+        text-align: left;
+    }
+
+
+    /* box2 */    
+    .con3_2nd_about{
+        width: 600px;
+        height: 400px;
+        background-size: cover;    
+        margin: 0px 0px 0px 40px !important;
+    }
+
+    .con3_2nd_box{
+        max-width: 1440px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .con3_ann1_2, .logoImg_con3_2, .con3_ann2_2{
+        text-align: right;
+    }
+
+    .con3_ann_box_2{
+        height: 400px;
+    }
+
+    .icon_logo_con3{
+        width: 50px;
+        margin: 60px 0px 6px 0px;
+    }
+
+
+}
+
+
+
+@media (min-width: 1200px) {
+    /* 컨텐츠2 */
+    .content2_about{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .con1_img_about{
+        padding: 20px 16px 0px 16px;
+    }
+
+    /* 컨텐츠3 */
+    /* box1 */
+    .con3_1st_about{
+        width: 600px;
+        height: 400px;
+        background-size: cover;    
+        margin: 0px 40px 0px 0px !important;
+    }
+    
+    .con3_ann_box{
+        height: 400px;
+    }
+
+    .con3_1st_box{
+        max-width: 1200px;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto !important;
+    }
+
+    .con3_ann1, .logoImg_con3, .con3_ann2{
+        text-align: left;
+    }
+
+
+    /* box2 */    
+    .con3_2nd_about{
+        width: 600px;
+        height: 400px;
+        background-size: cover;    
+        margin: 0px 0px 0px 40px !important;
+    }
+
+    .con3_2nd_box{
+        max-width: 1200px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        margin: 0 auto !important;
+        padding-bottom: 140px;
+    }
+
+    .con3_ann1_2, .logoImg_con3_2, .con3_ann2_2{
+        text-align: right;
+    }
+
+    .con3_ann_box_2{
+        height: 400px;
+    }
+
+    .con3_box_about{
+        margin:  0 auto !important;
+    }
+
+    .icon_logo_con3{
+        width: 50px;
+        margin: 80px 0px 6px 0px;
+    }
+
+
 }
