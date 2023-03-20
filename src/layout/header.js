@@ -85,14 +85,12 @@ const Header = () => {
                             <a class="nav-link dropdown-toggle main_nav" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Community</a>
                             <ul class="dropdown-menu">
                                 <li>                            
-                                    <Link to="/BoardList">
-                                        <a class="dropdown-item">자유게시판</a>
-                                    </Link>
-                                </li>
-                                <li>                            
                                     <Link to="/CafeRequest">
                                         <a class="dropdown-item">카페요청게시판</a>
                                     </Link>
+                                </li>
+                                <li>                            
+                                    <a class="dropdown-item">자유게시판</a>
                                 </li>
                             </ul>
                         </li>  
