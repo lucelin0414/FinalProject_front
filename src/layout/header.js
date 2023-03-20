@@ -84,19 +84,10 @@ const Header = () => {
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle main_nav" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Community</a>
                             <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href='http://localhost:9005/work/notice/retrieveBoardList.do'>공지사항</a>
-                                </li>
                                 <li>                            
                                     <Link to="/BoardList">
                                         <a class="dropdown-item">자유게시판</a>
                                     </Link>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href='http://localhost:9005/work/comm/retrieveBoardList.do'>커뮤니티</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href='http://localhost:9005/work/inquiry/retrieveBoardList.do'>문의게시판</a>
                                 </li>
                                 <li>                            
                                     <Link to="/CafeRequest">
