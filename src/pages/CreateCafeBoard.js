@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { Container } from 'reactstrap';
 import RequestService from '../board/service/RequestService';
+import '../css/createcafe.css'
 
 class CreateCafeBoard extends Component {
     constructor(props) {
@@ -57,9 +59,9 @@ class CreateCafeBoard extends Component {
 
     getTitle(){
         if(this.state.bno === '_create'){
-            return <h3 className='text-center'>카페 요청 건의글</h3>
+            return <div className='cafe_board_header'><p className="about-header-text">카페 요청사항 작성</p></div>
         }else{
-            return <h3 className='text-center'>{this.state.bno}번 글을 수정합니다.</h3>
+            return <h3 className='text-center' style={{marginTop:"100px", marginBottom:"100px"}}>{this.state.bno}번째 요청사항 수정</h3>
         }
     }
 
@@ -84,35 +86,33 @@ class CreateCafeBoard extends Component {
     render() {
         return (
             <div>
-                <div className = "container">
+                {this.getTitle()}
+                <Container>
                     <div className = "row">
-                        <div className = "card col-md-6 offset-md-3 offset-md-3">
-                            {this.getTitle()}
-                            <div className = "card-body">
-                                <form>
-                                    <div className = "form-group">
-                                        <label> 제목 </label>
-                                        <input type="text" placeholder="title" name="title" className="form-control" 
-                                        value={this.state.title} onChange={this.changeTitle}/>
-                                    </div>
-                                    <div className = "form-group">
-                                        <label> 요청사항  </label>
-                                        <textarea placeholder="contents" name="contents" className="form-control" 
-                                        value={this.state.content} onChange={this.changeContent}/>
-                                    </div>
-                                    <div className = "form-group">
-                                        <label> 작성자  </label>
-                                        <input placeholder="memberNo" name="memberNo" className="form-control" 
-                                        value={this.state.writer} onChange={this.changeWriter}/>
-                                    </div>
-                                    <br />
-                                    <button className="btn btn-success" onClick={this.createBoard}>제출</button>
-                                    <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft:"10px"}}>취소</button>
-                                </form>
-                            </div>
+                        <div className = "col-md-12">
+                            <form>
+                                <div className = "form_create_cafe form-group">
+                                    <label> 제목 </label>
+                                    <input type="text" placeholder="제목을 입력해주세요" name="title" className="form-control" 
+                                    value={this.state.title} onChange={this.changeTitle}/>
+                                </div>
+                                <div className = "form_create_cafe form-group">
+                                    <label> 요청사항  </label>
+                                    <textarea placeholder="요청사항을 입력해주세요" name="contents" className="form-control" 
+                                    value={this.state.content} onChange={this.changeContent}/>
+                                </div>
+                                <div className = "form_create_cafe form-group">
+                                    <label> 작성자  </label>
+                                    <input placeholder="작성자를 입력해주세요" name="memberNo" className="form-control" 
+                                    value={this.state.writer} onChange={this.changeWriter}/>
+                                </div>
+                                <br />
+                                <button className="btn btn-success" onClick={this.createBoard}>제출</button>
+                                <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft:"10px"}}>취소</button>
+                            </form>
                         </div>
                     </div>
-                </div>
+                </Container>
             </div>
         );
     }

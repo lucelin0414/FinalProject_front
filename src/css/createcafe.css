@@ -1,0 +1,8 @@
+.form_create_cafe{
+    margin-bottom: 30px !important;
+}
+
+.form_create_cafe>label{
+    font-size: 25px;
+    margin-bottom: 10px !important;
+}
