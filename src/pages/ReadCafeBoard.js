@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, FormGroup, FormText, Input, Label, Table } from 'reactstrap';
+import { Container} from 'reactstrap';
 import RequestService from '../board/service/RequestService';
 
 class ReadCafeBoard extends Component {

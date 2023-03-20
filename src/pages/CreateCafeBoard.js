@@ -61,7 +61,7 @@ class CreateCafeBoard extends Component {
         if(this.state.bno === '_create'){
             return <div className='cafe_board_header'><p className="about-header-text">카페 요청사항 작성</p></div>
         }else{
-            return <h3 className='text-center' style={{marginTop:"100px", marginBottom:"100px"}}>{this.state.bno}번째 요청사항 수정</h3>
+            return <h3 className='text-center' style={{marginTop:"100px", marginBottom:"100px"}}>{this.state.bno}번글 요청사항 수정</h3>
         }
     }
 
