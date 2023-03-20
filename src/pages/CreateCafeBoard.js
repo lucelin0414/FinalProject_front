@@ -58,26 +58,27 @@ class CreateCafeBoard extends Component {
                 <div className = "container">
                     <div className = "row">
                         <div className = "card col-md-6 offset-md-3 offset-md-3">
-                            <h3 className="text-center">새글을 작성해주세요</h3>
+                            <h3 className="text-center">카페 요청 건의글</h3>
                             <div className = "card-body">
                                 <form>
                                     <div className = "form-group">
-                                        <label> Title </label>
+                                        <label> 제목 </label>
                                         <input type="text" placeholder="title" name="title" className="form-control" 
                                         value={this.state.title} onChange={this.changeTitle}/>
                                     </div>
                                     <div className = "form-group">
-                                        <label> Contents  </label>
+                                        <label> 요청사항  </label>
                                         <textarea placeholder="contents" name="contents" className="form-control" 
                                         value={this.state.content} onChange={this.changeContent}/>
                                     </div>
                                     <div className = "form-group">
-                                        <label> writer  </label>
+                                        <label> 작성자  </label>
                                         <input placeholder="memberNo" name="memberNo" className="form-control" 
                                         value={this.state.writer} onChange={this.changeWriter}/>
                                     </div>
-                                    <button className="btn btn-success" onClick={this.createBoard}>Save</button>
-                                    <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft:"10px"}}>Cancel</button>
+                                    <br />
+                                    <button className="btn btn-success" onClick={this.createBoard}>제출</button>
+                                    <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft:"10px"}}>취소</button>
                                 </form>
                             </div>
                         </div>

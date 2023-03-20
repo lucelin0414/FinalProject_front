@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import RequestService from '../board/service/RequestService';
+import '../css/caferequest.css'
 
 class CafeRequest extends Component {
     constructor(props){
@@ -22,14 +23,16 @@ class CafeRequest extends Component {
         this.props.history.push('/CreateCafeBoard/');
     }
 
+    readBoard(bno){
+        this.props.history.push('/ReadCafeBoard/' + bno)
+    }
+s
     render() {
         return (
             <div>
-                <h2 className="text-center">카페 커미션 요청 게시판</h2>
-                <div className = "row">
-                    <button className="btn btn-primary" onClick={this.createBoard}>글 작성</button>
-                </div>
-                <div className ="row">
+                <h2 className="text-center">카페 요청 게시판</h2>
+                <button className="btn_cafe_request btn btn-primary" onClick={this.createBoard}>글 작성</button>
+                <div className ="cafe_board row">
                     <table className="table table-striped table-bordered">
                         <thead>
                             <tr>
@@ -37,7 +40,6 @@ class CafeRequest extends Component {
                                 <th>타이틀 </th>
                                 <th>글 내용 </th>
                                 <th>작성자 </th>
-                                <th>작성일 </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -46,10 +48,9 @@ class CafeRequest extends Component {
                                     board => 
                                     <tr key = {board.bno}>
                                         <td> {board.bno} </td>
-                                        <td> {board.title} </td>
+                                        <td> <a onClick = {() => this.readBoard(board.bno)}>{board.title} </a></td>
                                         <td> {board.content} </td>
                                         <td> {board.writer} </td>
-                                        <td> {board.regdate} </td>
                                     </tr>
                                 )
                             }

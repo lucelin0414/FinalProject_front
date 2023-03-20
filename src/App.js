@@ -16,6 +16,7 @@ import aboutus from "./pages/aboutus";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CafeRequest from "./pages/CafeRequest";
 import CreateCafeBoard from "./pages/CreateCafeBoard";
+import ReadCafeBoard from "./pages/ReadCafeBoard";
 
 
 function App(){
@@ -24,6 +25,7 @@ function App(){
     <>
       <Header />
           <Switch>
+            <Route exact path="/ReadCafeBoard/:bno"  component={ReadCafeBoard} />
             <Route exact path="/CreateCafeBoard" component={CreateCafeBoard} />
             <Route exact path="/CafeRequest" component={CafeRequest} />
             <Route exact path="/AboutUs" component={aboutus} />
