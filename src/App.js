@@ -26,7 +26,7 @@ function App(){
       <Header />
           <Switch>
             <Route exact path="/ReadCafeBoard/:bno"  component={ReadCafeBoard} />
-            <Route exact path="/CreateCafeBoard" component={CreateCafeBoard} />
+            <Route exact path="/CreateCafeBoard/:bno" component={CreateCafeBoard} />
             <Route exact path="/CafeRequest" component={CafeRequest} />
             <Route exact path="/AboutUs" component={aboutus} />
             <Route exact path="/SuccessInfo" component={SuccessInfo} />

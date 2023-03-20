@@ -6,6 +6,7 @@ class CreateCafeBoard extends Component {
         super(props);
         
         this.state = {
+            bno: this.props.match.params.bno,
             writer : '',
             title: '',
             content: '',
@@ -42,13 +43,41 @@ class CreateCafeBoard extends Component {
             content : this.state.content,
         }
         console.log("board => "+ JSON.stringify(board));
-        RequestService.createBoard(board).then(res => {
-            this.props.history.push('/CafeRequest');
-        });
+        if(this.state.bno === '_create'){
+            RequestService.createBoard(board)
+        }else{
+            RequestService.updateBoard(this.state.bno, board)
+        }
+        this.props.history.push('/CafeRequest');
     }
 
     cancel(){
         this.props.history.push('/CafeRequest');
+    }
+
+    getTitle(){
+        if(this.state.bno === '_create'){
+            return <h3 className='text-center'>카페 요청 건의글</h3>
+        }else{
+            return <h3 className='text-center'>{this.state.bno}번 글을 수정합니다.</h3>
+        }
+    }
+
+    componentDidMount(){
+        if (this.state.bno === '_create') {
+            return
+        } else {
+            RequestService.getOneBoard(this.state.bno).then((res) =>{
+                let board = res.data;
+                console.log("board => " + JSON.stringify(board));
+
+                this.setState({
+                    title: board.title,
+                    content: board.content,
+                    writer: board.writer
+                })
+            })
+        }
     }
 
 
@@ -58,7 +87,7 @@ class CreateCafeBoard extends Component {
                 <div className = "container">
                     <div className = "row">
                         <div className = "card col-md-6 offset-md-3 offset-md-3">
-                            <h3 className="text-center">카페 요청 건의글</h3>
+                            {this.getTitle()}
                             <div className = "card-body">
                                 <form>
                                     <div className = "form-group">

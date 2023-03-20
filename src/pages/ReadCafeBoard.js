@@ -22,6 +22,20 @@ class ReadCafeBoard extends Component {
         this.props.history.push('/CafeRequest');
     }
 
+    updateBoard(){
+        let bno = this.state.bno;
+        this.props.history.push('/CreateCafeBoard/' + bno)
+    }
+
+    deleteView = async function() {
+        if (window.confirm("정말로 글을 삭제하시겠습니까?\n삭제된 글은 복구하실 수 없습니다.")) {
+            RequestService.deleteBoard(this.state.bno).then(res => {
+                console.log("delete result => " + JSON.stringify(res));
+                this.props.history.push('/CafeRequest');
+            });
+        }; 
+    }
+
     render() {
         return (
             <div>
@@ -45,6 +59,8 @@ class ReadCafeBoard extends Component {
                                 </FormGroup>
                             </div>
                             <button className="btn btn-primary" onClick={this.goToList.bind(this)} style={{marginLeft:"10px"}}>글 목록으로 이동</button>
+                            <button className="btn btn-success" onClick={this.updateBoard.bind(this)} style={{marginLeft:"10px"}}>수정</button>
+                            <button className="btn btn-danger" onClick={this.deleteView.bind(this)} style={{marginLeft:"10px"}}>삭제</button>
                     </div>
                 </div>
             </div>
