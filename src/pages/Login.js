@@ -11,6 +11,13 @@ import { Input } from 'reactstrap';
 import NaverLogin from "react-login-by-naver";
 
 function Login () {
+  const handleKeyPress = e => {
+    if(e.key === 'Enter') {
+      fn_signIn();
+    }
+  }
+
+
   //네이버로그인성공시 호출되는 함수
   const history = useHistory(); // 라우팅을 위한 히스토리 객체
   const responseLogin = (res, type) => {
@@ -108,11 +115,11 @@ function Login () {
                             </Form.Group>
 
                             <Form.Group className="form-group mb-4">
-                                <Input type="password" id="pw" placeholder="비밀번호를 입력하세요" />
+                                <Input type="password" id="pw" placeholder="비밀번호를 입력하세요" onKeyPress={handleKeyPress}/>
                             </Form.Group>
                             
                             <div className="form-group d-grid gap-2 mt-4">
-                                <Button id="id_btn" variant="primary" size='lg' onClick={fn_signIn}>로그인</Button>
+                                <Button id="id_btn" variant="primary" size='lg' onClick={fn_signIn} >로그인</Button>
                                 <NaverLogin
                                 clientId="TqmqLYaibwM6DQg6GDEZ"   // 옆에 네이버 클라이언트 ID 수정 바랍니다
                                 callbackUrl="http://localhost:3000/Login"
