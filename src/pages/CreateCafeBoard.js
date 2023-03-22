@@ -7,6 +7,7 @@ class CreateCafeBoard extends Component {
     constructor(props) {
         super(props);
         
+        // state 초기값을 설정
         this.state = {
             bno: this.props.match.params.bno,
             writer : '',
@@ -14,24 +15,28 @@ class CreateCafeBoard extends Component {
             content: '',
         }
 
+        // 각 함수형이 this를 이용 가능하도록 바인딩 해줌
         this.changeWriter = this.changeWriter.bind(this);
         this.changeTitle = this.changeTitle.bind(this);
         this.changeContent = this.changeContent.bind(this);
         this.createBoard = this.createBoard.bind(this);
     }
     
+    // setState를 이용해서 writer 값을 재 설정
     changeWriter = (event) =>{
         this.setState({
             writer : event.target.value
         });
     }
 
+    // setState를 이용해서 title 값을 재 설정
     changeTitle = (event) => {
         this.setState({
             title : event.target.value
         });
     }
 
+    // setState를 이용해서 content 값을 재 설정
     changeContent = (event) =>{
         this.setState({
             content : event.target.value
@@ -45,6 +50,7 @@ class CreateCafeBoard extends Component {
             content : this.state.content,
         }
         console.log("board => "+ JSON.stringify(board));
+        //"/CreateCafeBoard/:bno" 경로의 bno 값이 _create 이면 생성을, 아니라면 수정을 하도록 설정
         if(this.state.bno === '_create'){
             RequestService.createBoard(board)
         }else{
@@ -58,6 +64,7 @@ class CreateCafeBoard extends Component {
     }
 
     getTitle(){
+        //"/CreateCafeBoard/:bno" 경로의 bno 값에 따라 보이는 텍스트가 다르도록 설정
         if(this.state.bno === '_create'){
             return <div className='cafe_board_header'><p className="about-header-text">카페 요청사항 작성</p></div>
         }else{
@@ -94,16 +101,19 @@ class CreateCafeBoard extends Component {
                                 <div className = "form_create_cafe form-group">
                                     <label> 제목 </label>
                                     <input type="text" placeholder="제목을 입력해주세요" name="title" className="form-control" 
+                                    // value 값에 입력된 title 값이 들어가도록 설정함.
                                     value={this.state.title} onChange={this.changeTitle}/>
                                 </div>
                                 <div className = "form_create_cafe form-group">
                                     <label> 요청사항  </label>
                                     <textarea placeholder="요청사항을 입력해주세요" name="contents" className="form-control" 
+                                    // value 값에 입력된 content 값이 들어가도록 설정함.
                                     value={this.state.content} onChange={this.changeContent}/>
                                 </div>
                                 <div className = "form_create_cafe form-group">
                                     <label> 작성자  </label>
                                     <input placeholder="작성자를 입력해주세요" name="memberNo" className="form-control" 
+                                    // value 값에 입력된 writer 값이 들어가도록 설정함.
                                     value={this.state.writer} onChange={this.changeWriter}/>
                                 </div>
                                 <br />
