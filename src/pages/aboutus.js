@@ -85,13 +85,13 @@ class aboutus extends Component {
                                     <img src="img/icon_logo.png" alt="logo" className='icon_logo_con3' />
                                 </div>
                                 <p class="con3_ann1_2">
-                                    '트렌드를 선도하는 맛'
+                                    '나만을 위한 특별한 맛'
                                 </p>
                                 <p class="con3_ann2_2">
                                     <br/>
-                                    카페 천성은 새로운 트렌드를 만들어냅니다. <br/>
-                                    별처럼 반짝이는 취향을 담아내기 위해 끊임없이 연구합니다. <br/><br/>
-                                    천성에서 당신만의 별을 찾아내 유행을 선도하세요.
+                                    고객님만을 위해 매번 직접 내리는 커피 원액. <br/>
+                                    주문해주신 스타일로 매번 특별하게 원두를 추출합니다. <br/><br/>
+                                    천성에서 자신의 별을 발견하는 새로움을 만나보세요.
                                 </p>
                             </div>
                         </div> 
