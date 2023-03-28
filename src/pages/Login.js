@@ -124,8 +124,8 @@ function Login () {
                                 clientId="TqmqLYaibwM6DQg6GDEZ"   // 옆에 네이버 클라이언트 ID 수정 바랍니다
                                 callbackUrl="http://localhost:3000/Login"
                                 render={(props) => (
-                                    <div onClick={props.onClick}>
-                                        <img src="/naver-login.PNG" alt="네이버로그인이미지" className='my_naver' />
+                                    <div onClick={props.onClick} className='my_naver'>
+                                        <img src="/naver-login.PNG" alt="네이버로그인이미지" />
                                     </div>
                                 )}
                                 onSuccess={(res) => responseLogin(res, "naver")}
