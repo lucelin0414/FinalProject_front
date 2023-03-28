@@ -39,7 +39,7 @@ function App(){
             <Route exact path="/Faq" component={Faq} />
             <Route exact path="/Promote" component={Promote} />
             <Route exact path="/:crud" component={InputForm} />
-            <Route exact path="/" component={Main} />
+            <Route exact path="/" component={aboutus} />
           </Switch>
       <Footer />
     </>
